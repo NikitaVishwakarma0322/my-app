@@ -32,13 +32,6 @@ export default function TextForm(props) {
     setText(event.target.value);
   };
 
-  // const handleBClick = () => {
-  //   //   console.log("Bold was Clicked");
-  //   //   // let newText = <BoldText>text</BoldText>;
-  //   //   // let newText = bold(text);
-  //   //   // setText(newText);
-  // };
-
   const [Bstyle, setBstyle] = useState({
     fontWeight: "normal",
     fontStyle: "normal",
@@ -73,7 +66,7 @@ export default function TextForm(props) {
   const [text, setText] = useState("");
   // setText("New Text");
   return (
-    <dic style={{ color: props.mode === "dark" ? "white" : "#042743" }}>
+    <div style={{ color: props.mode === "dark" ? "white" : "#042743" }}>
       <div className="container">
         <h1>{props.heading}</h1>
         <div className="mb-3">
@@ -127,6 +120,6 @@ export default function TextForm(props) {
         <h3>Preview</h3>
         <p>{text}</p>
       </div>
-    </dic>
+    </div>
   );
 }
